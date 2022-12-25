@@ -11,8 +11,8 @@ void InPutArray(string[] yourArray, uint amount)
     for (int i = 0; i < yourArray.Length; i++)
     {
         Console.Write($"\nВведите элемент массива под индексом {i}:\t");
-        yourArray[i] = Console.ReadLine();
-    }
+        yourArray[i] = Console.ReadLine() ??"no data";
+    }// проверка на null и вывод нужного текста
 
     Console.WriteLine(($"Исходный массив: [{string.Join(", ", yourArray)}]"));
 }
